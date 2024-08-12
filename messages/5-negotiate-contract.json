@@ -4,12 +4,12 @@
     "odrl": "http://www.w3.org/ns/odrl/2/"
   },
   "@type": "NegotiationInitiateRequestDto",
-  "counterPartyAddress": "http://localhost:28184/protocol",
+  "counterPartyAddress": "http://localhost:18184/protocol",
   "protocol": "dataspace-protocol-http",
   "policy": {
     "@id": "{{policyId}}",
     "@context": "http://www.w3.org/ns/odrl.jsonld",
-    "@type": "Set",
+    "@type": "Offer",
     "odrl:permission": [
       {
         "@type": "Permit",
