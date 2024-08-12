@@ -1,0 +1,14 @@
+{
+  "@context": { "@vocab": "https://w3id.org/edc/v0.0.1/ns/" },
+  "@id": "contract-definition",
+  "accessPolicyId": "no-constraint-policy",
+  "properties": {
+  },
+  "contractPolicyId": "no-constraint-policy",
+    "assetsSelector": {
+        "@type": "CriterionDto",
+        "operandLeft": "https://w3id.org/edc/v0.0.1/ns/id",
+        "operator": "=",
+        "operandRight": "kafka-stream-asset"
+    }
+}

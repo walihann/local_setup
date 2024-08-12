@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "edc": "https://w3id.org/edc/v0.0.1/ns/",
+    "odrl": "http://www.w3.org/ns/odrl/2/"
+  },
+  "@type": "ContractRequest",
+  "counterPartyAddress": "http://localhost:28184/protocol",
+  "protocol": "dataspace-protocol-http",
+  "policy": {
+    "@id": "Y29udHJhY3QtZGVmaW5pdGlvbg==:a2Fma2Etc3RyZWFtLWFzc2V0:ZDcyMmI4NDgtZWIwZS00NDMzLTkxYjktYTM0MGFkNmExN2Q3",
+    "@type": "odlr:Offer",
+    "odrl:permission": [],
+    "odrl:prohibition": [],
+    "odrl:obligation": [],
+    "odrl:assigner": "provider",
+    "odrl:target": "kafka-stream-asset"
+  }
+}

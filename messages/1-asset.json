@@ -1,0 +1,24 @@
+{
+  "@context": {
+    "@vocab": "https://w3id.org/edc/v0.0.1/ns/"
+  },
+  "@id": "kafka-stream-asset",
+  "properties": {
+    "name": "Yunex Intersection Status",
+    "contenttype:" : "application/json",
+    "serviceOfferingName": "YunexIntersectionStatus",
+    "serviceOfferingDescription": "Yunex Intersection Status",
+    "description": "Yunex Intersection Status",
+    "endPoint": "http://localhost:18182/control/transfer",
+    "protocol": "HTTP",
+    "port": "18182",
+    "host": "localhost",
+    "version": "1.0"
+  },
+  "dataAddress": {
+    "type": "Kafka",
+    "kafka.bootstrap.servers": "localhost:9092",
+    "topic": "gaia_IntersectionStatus",
+    "target": "gaia_IntersectionStatus"
+  }
+}
