@@ -3,8 +3,31 @@
     "edc": "https://w3id.org/edc/v0.0.1/ns/",
     "odrl": "http://www.w3.org/ns/odrl/2/"
   },
-  "@id": "no-constraint-policy",
+  "@type": "NegotiationInitiateRequestDto",
+  "counterPartyAddress": "https://edc-consumer.app.dev.yunex.dev/protocol",
+  "providerId": "provider",
+  "protocol": "dataspace-protocol-http",
+  "@id": "full-access-policy",
   "policy": {
-    "@type": "odrl:Set"
+    "@context": "http://www.w3.org/ns/odrl.jsonld",
+    "@type": "Set",
+    "odrl:permission": [
+      {
+        "@type": "Permit",
+        "action": "read"
+      },
+      {
+        "@type": "Permit",
+        "action": "write"
+      }
+    ],
+    "odrl:prohibition": [],
+    "odrl:obligation": [],
+    "odrl:assigner": {
+      "@id": "provider"
+    },
+    "odrl:target": {
+      "@id": "kafka-stream-asset"
+    }
   }
 }
