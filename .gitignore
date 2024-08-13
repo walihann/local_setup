@@ -1,2 +1,6 @@
 messages/negotiate-contract.json
 messages/transfer.json
+provider/resources/connector/gaia-x/service-offering/YunexIntersectionStatus/VerifiablePresentation.json
+provider/resources/connector/gaia-x/service-offering/YunexIntersectionStatus/catalog.json
+provider/resources/connector/gaia-x/service-offering/YunexIntersectionStatus/cesReply.json
+provider/resources/connector/gaia-x/service-offering/YunexIntersectionStatus/compliant.json
