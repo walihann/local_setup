@@ -8,8 +8,21 @@
   "protocol": "dataspace-protocol-http",
   "policy": {
     "@id": "{{policyId}}",
-    "@type": "odrl:Offer",
-    "odrl:permission": [],
+    "@type": "http://www.w3.org/ns/odrl/2/Offer",
+    "odrl:permission": [
+      {
+        "@type": "Permit",
+        "odrl:action": {
+          "@id": "http://www.w3.org/ns/odrl/2/read"
+        }
+      },
+      {
+        "@type": "Permit",
+        "odrl:action": {
+          "@id": "http://www.w3.org/ns/odrl/2/write"
+        }
+      }
+    ],
     "odrl:prohibition": [],
     "odrl:obligation": [],
     "odrl:assigner": {
