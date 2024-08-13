@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # connector from gaia-x-4-roms
-export CONNECTOR_JAR=~/prj/gaiax/gaia-x-4-roms/tp3/roms-edc/launchers/connector/build/libs/connector.jar
+# export CONNECTOR_JAR=~/prj/gaiax/gaia-x-4-roms/tp3/roms-edc/launchers/connector/build/libs/connector.jar
 
 # connector from official edc-connector version v0.6.4
-# export CONNECTOR_JAR=~/prj/github/eclipse-edc/Samples/transfer/streaming/streaming-03-kafka-broker/streaming-03-runtime/build/libs/connector.jar
+export CONNECTOR_JAR=~/prj/github/eclipse-edc/Samples/transfer/streaming/streaming-03-kafka-broker/streaming-03-runtime/build/libs/connector.jar
 
 export EDC_PROVIDER_URL=http://localhost:18183
 export EDC_CONSUMER_URL=http://localhost:28183
