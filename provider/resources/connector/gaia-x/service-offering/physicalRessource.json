@@ -1,0 +1,36 @@
+{
+    "issuanceDate": "2024-08-12T07:18:21.977Z",
+    "credentialSubject": {
+        "gx:manufacturedBy": {
+            "id": "https://gaiax4roms.hotsprings.io/Yunex_GmbH_participant/did.json"
+        },
+        "gx:maintainedBy": {
+            "id": "https://gaiax4roms.hotsprings.io/Yunex_GmbH_participant/did.json"
+        },
+        "gx:ownedBy": {
+            "id": "https://gaiax4roms.hotsprings.io/Yunex_GmbH_participant/did.json"
+        },
+        "@type": "gx:PhysicalResource",
+        "gx:policy": "default: allow",
+        "id": "https://gaiax4roms.hotsprings.io/Yunex_GmbH_physicalRessource/did.json",
+        "gx:license": "EPL-2.0",
+        "gx:location": "48.08978173508841_11.647344312518069"
+    },
+    "id": "did:web:gaiax4roms.hotsprings.io:Yunex_GmbH_physicalRessource",
+    "proof": {
+        "created": "2024-08-12T07:18:24.909Z",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..cAiSxG9p9AvzAEdpnd4yTUYss-AHRxRNTIojUsXmJkc_xONVlY1MNDtwqxhKIUmhz4u8anSlc-QS7L3F2U_fvfIQyaunBips99Ay4tiGQgjd8ZBdbYK0oVdZS02gMGVmquZs2i5OPWj-nY0KzVvEWJH-Ma-bd0Bkc-IDKq6YNTtQO7IehBA_I4quBXV6blJU2QSURUKExIesJXAGrOAD1giRxJxBGU4juWecTDL96BbWcHzNuk0hkaStMdpojACLU3zSERjJETwV0lss7nnwyTyEULhCzI5e5fKLgh3exbLUOLoaBV6eFOUmCCa64ix7eg2sSNKJh96AlsaxybclLQ",
+        "proofPurpose": "assertionMethod",
+        "type": "JsonWebSignature2020",
+        "verificationMethod": "did:web:gaiax4roms.hotsprings.io#gaiax4roms.hotsprings.io"
+    },
+    "type": [
+        "VerifiableCredential"
+    ],
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+    ],
+    "issuer": "did:web:gaiax4roms.hotsprings.io"
+}
