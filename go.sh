@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # connector from gaia-x-4-roms
-# export CONNECTOR_JAR=~/prj/gaiax/gaia-x-4-roms/tp3/roms-edc/launchers/connector/build/libs/connector.jar
+export CONNECTOR_JAR=~/prj/gaiax/gaia-x-4-roms/tp3/roms-edc/launchers/connector/build/libs/connector.jar
 
 # connector from official edc-connector version v0.6.4
-export CONNECTOR_JAR=~/prj/github/eclipse-edc/Samples/transfer/streaming/streaming-03-kafka-broker/streaming-03-runtime/build/libs/connector.jar
+# export CONNECTOR_JAR=~/prj/github/eclipse-edc/Samples/transfer/streaming/streaming-03-kafka-broker/streaming-03-runtime/build/libs/connector.jar
 
 export EDC_PROVIDER_URL=http://localhost:18183
 export EDC_CONSUMER_URL=http://localhost:28183
@@ -39,32 +39,39 @@ read -p "press Enter to initialize provider"
 
 cd messages
 
+echo "create dataplane"
 curl -H 'Content-Type: application/json' \
      -d @0-dataplane.json \
      -X POST "${EDC_PROVIDER_URL}/management/v2/dataplanes" \
      -s | jq .
 echo
 
+echo "create asset"
 curl -H 'Content-Type: application/json' \
      -d @1-asset.json \
      -X POST "${EDC_PROVIDER_URL}/management/v3/assets" \
      -s | jq .
 
+echo "create policy"
 curl -H 'Content-Type: application/json' \
      -d @2-policy-definition.json \
      -X POST "${EDC_PROVIDER_URL}/management/v2/policydefinitions" \
      -s | jq .
 
+echo "create contract"
 curl -H 'Content-Type: application/json' \
      -d @3-contract-definition.json \
      -X POST "${EDC_PROVIDER_URL}/management/v2/contractdefinitions" \
      -s | jq .
 echo
 
+echo "provider is now configured"
+
 echo
 echo "------------------------------------------------------------------------------"
 read -p "press Enter to initialize consumer"
 
+echo "retrieve asset from catalog"
 POLICY_ID=$(curl -H 'Content-Type: application/json' \
      -d @4-get-dataset.json \
      -X POST "${EDC_CONSUMER_URL}/management/v2/catalog/dataset/request" \
@@ -77,6 +84,7 @@ cat 5-negotiate-contract.json | jq --arg policyId "${POLICY_ID}" '.policy."@id" 
 echo "press Enter to continue"
 read -n 1 -s   
 
+echo "start contract negotiation"
 CONTRACT_NEG_ID=$(curl -H 'Content-Type: application/json' \
      -d @negotiate-contract.json \
      -X POST "${EDC_CONSUMER_URL}/management/v2/contractnegotiations" \
