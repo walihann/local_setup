@@ -9,16 +9,19 @@
   "protocol": "dataspace-protocol-http",
   "@id": "full-access-policy",
   "policy": {
-    "@context": "http://www.w3.org/ns/odrl.jsonld",
-    "@type": "Set",
+    "@type": "odrl:Set",
     "odrl:permission": [
       {
         "@type": "Permit",
-        "action": "read"
+        "odrl:action": {
+          "@id": "http://www.w3.org/ns/odrl/2/read"
+        }
       },
       {
         "@type": "Permit",
-        "action": "write"
+        "odrl:action": {
+          "@id": "http://www.w3.org/ns/odrl/2/write"
+        }
       }
     ],
     "odrl:prohibition": [],
